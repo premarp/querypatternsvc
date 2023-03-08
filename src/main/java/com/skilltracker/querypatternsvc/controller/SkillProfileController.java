@@ -31,8 +31,8 @@ import com.skilltracker.querypatternsvc.manager.SkillProfileManager;
 import org.springframework.kafka.annotation.KafkaListener;
 
 import com.skilltracker.querypatternsvc.bean.SkillSet;
-import com.common.dto.SkillSetCommon;
-import com.common.dto.SkillTrackerCommon;
+//import com.common.dto.SkillSetCommon;
+//import com.common.dto.SkillTrackerCommon;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -60,7 +60,7 @@ public class SkillProfileController {
 	@Qualifier("skillTracker")
 	RedisTemplate<String, Object> template;
 	
-	 @KafkaListener(groupId = "SKILLTRACKER",topics = "SKILLTRACKER_ADD", containerFactory = "kafkaListenerContainerFactory")
+	/* @KafkaListener(groupId = "SKILLTRACKER",topics = "SKILLTRACKER_ADD", containerFactory = "kafkaListenerContainerFactory")
 	    public void consumeSkillProfile(SkillTrackerCommon skillProfile) {
 			SkillTracker record = new SkillTracker();
 			
@@ -106,7 +106,7 @@ public class SkillProfileController {
 			
 			logger.info("Record Inserted succesfully for associateId :{} OjectId:{}", skillProfile.getAssociateId(),
 					record.getId());
-	    }
+	    }*/
 
 
 	@CrossOrigin(origins = "https://skillprofileadmin.azurewebsites.net")

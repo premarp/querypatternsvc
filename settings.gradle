@@ -1,0 +1,3 @@
+rootProject.name = 'querypatternsvc'
+include ':commons-dto'
+project(":commons-dto").projectDir = new File("../commons-dto")

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: querypattern
+  redis:
+    host: skilltracker.redis.cache.windows.net
+    password: vQElWlavi1iONlQkOqnnGLekXitV8WyD6AzCaFOk06U=
+    ssl: true
+    port: 6380
+    timeOut: 10
+    cache:
+      expiryTime : 15
+  data:
+    mongodb:
+      database: skilltrackerdb
+      uri: mongodb://skilltrackerdb:1YOkJQMs99GoGM8esUtbWh5B8A0FDl4emcnejFbmY2G8SDBUDicjhwTtUwTd2L6H1130HtHmRtK2ACDbOV5tUg==@skilltrackerdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@skilltrackerdb@
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+server:
+  port: 8083

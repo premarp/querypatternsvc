@@ -15,7 +15,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
-import com.common.dto.SkillTrackerCommon;
+//import com.common.dto.SkillTrackerCommon;
 
 @Configuration
 public class KafkaConsumerConfig {
@@ -27,14 +27,15 @@ public class KafkaConsumerConfig {
 		configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 		configs.put(ConsumerConfig.GROUP_ID_CONFIG, "SKILLTRACKER");
-		return new DefaultKafkaConsumerFactory<>(configs, new StringDeserializer(), new JsonDeserializer<>(SkillTrackerCommon.class));
+		//return new DefaultKafkaConsumerFactory<>(configs, new StringDeserializer(), new JsonDeserializer<>(SkillTrackerCommon.class));
+		return null;
 	}
 
 	@Bean
 	public ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> kafkaListenerContainerFactory() {
-		ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> factory = new ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon>();
-		factory.setConsumerFactory(consumerFactory());
-		return factory;
+		//ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> factory = new ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon>();
+		//factory.setConsumerFactory(consumerFactory());
+		//return factory;
 	}
 	
 

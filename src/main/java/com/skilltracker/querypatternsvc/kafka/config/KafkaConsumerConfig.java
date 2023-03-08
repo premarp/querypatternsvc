@@ -20,23 +20,23 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 @Configuration
 public class KafkaConsumerConfig {
 	
-	@Bean
+	/*@Bean
 	public ConsumerFactory<String, SkillTrackerCommon> consumerFactory() {
 		Map<String, Object> configs = new HashMap<>();
 		configs.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.1.10:9092");
 		configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 		configs.put(ConsumerConfig.GROUP_ID_CONFIG, "SKILLTRACKER");
-		//return new DefaultKafkaConsumerFactory<>(configs, new StringDeserializer(), new JsonDeserializer<>(SkillTrackerCommon.class));
-		return null;
+		return new DefaultKafkaConsumerFactory<>(configs, new StringDeserializer(), new JsonDeserializer<>(SkillTrackerCommon.class));
+		
 	}
 
 	@Bean
 	public ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> kafkaListenerContainerFactory() {
-		//ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> factory = new ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon>();
-		//factory.setConsumerFactory(consumerFactory());
-		//return factory;
-	}
+		  ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon> factory = new ConcurrentKafkaListenerContainerFactory<String, SkillTrackerCommon>();
+		  factory.setConsumerFactory(consumerFactory());
+		  return factory;
+	}*/
 	
 
 
